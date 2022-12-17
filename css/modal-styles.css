@@ -1,0 +1,30 @@
+.modal {
+    width: 100vw;
+}
+
+.modal-body p {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.publish-button {
+    background-color: green;
+}
+
+.form-floating label {
+    padding-top: 6px;
+    color: lightgrey;
+}
+
+.form-floating p {
+    padding-top: 5px;
+}
+
+.form-floating p i {
+    border: lightgray    solid 1px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-right: 5px;
+}

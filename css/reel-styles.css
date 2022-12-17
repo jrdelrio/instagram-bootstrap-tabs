@@ -1,0 +1,45 @@
+.fade {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.photo-reel {
+    max-height: 600px;
+    border-top: solid grey 1px;
+    border-bottom: solid grey 1px;
+    border-radius: 0px;
+}
+
+.card-title {
+    font-size: 30px;
+}
+
+.card-likes {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.card-body {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.card {
+    margin-bottom: 15px;
+}
+
+.card-text {
+    padding-bottom: 10px;
+}
+
+.card-body-header {
+    display: inline;
+}
+
+.post-date {
+    float: right;
+    font-size: 25px;
+    margin-bottom: 0px;
+}

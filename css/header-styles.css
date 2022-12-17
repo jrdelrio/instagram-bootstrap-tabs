@@ -1,0 +1,50 @@
+.background {
+    text-align: center;
+    width: 90%;
+    margin: auto
+}
+
+
+#create-new-post-button {
+    background-color: green;
+    color: white;
+    max-height: 38px;
+    align-content: center;
+    
+}
+
+.ruedita {
+    background-color: grey;
+    color: white;
+    border-radius: 0.375rem;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.dropdown-toggle:hover {
+    background-color: #bbbbbb;
+    border: gray;
+}
+
+.dropdown-toggle:focus {
+    background-color: #dddddd !important;
+    border: gray
+}
+
+.btn-primary {
+    background-color: grey;
+    border: solid grey 1px;
+    margin-left: 8px;
+}
+
+.logout {
+    color: red !important;
+}
+
+.dropdown-item {
+    color: black;
+}
+
+#navbarSupportedContent{
+    align-content: right;
+}

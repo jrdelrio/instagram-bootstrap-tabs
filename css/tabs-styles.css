@@ -1,0 +1,25 @@
+.nav-link {
+    text-align: center;
+}
+
+.nav-pills {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.tab-icon {
+    background-color: none;
+    border: none;
+}
+
+#pills-profile-tab,
+#pills-home-tab {
+    background-color: transparent;
+    color: grey;
+    font-size: 30px;
+}
+
+.fade {
+    margin-right: 20px;
+    margin-left: 20px;
+}

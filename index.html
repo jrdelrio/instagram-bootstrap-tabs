@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/tabs-styles.css">
+    <link rel="stylesheet" href="./css/header-styles.css">
+    <link rel="stylesheet" href="./css/reel-styles.css">
+    <link rel="stylesheet" href="./css/gallery-styles.css">
+    <link rel="stylesheet" href="./css/modal-styles.css">
+    <title>Instagram</title>
+</head>
+
+<body>
+    <!--barra de navegación header-->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i>  Instagram</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 right-buttons">
+            
+            <!--botón create a new post-->
+            <li class="nav-item">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" id="create-new-post-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Create a new post
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Create a new post</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Caption:</p>
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="floatingTextarea" placeholder="Add the caption of your post here"></textarea>
+                                    <label for="floatingTextarea">Add the caption of your post here</label>
+                                    <p><i class="fa-solid fa-camera"></i>   <i class="fa-sharp fa-solid fa-location-dot"></i></p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary publish-button">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </li>
+
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    <i class="fa-solid fa-gear ruedita"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Accessibility</a>
+                    <a class="dropdown-item" href="#">Privacy and Data</a>
+                    <hr class="dropdown-divider">
+                    <a class="dropdown-item logout" href="#">Log Out</a>
+                </div>
+            </div>
+        </div>
+              
+
+        </div>
+    </nav>
+
+    <!--tabs-->
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <!--grilla fotos galeria-->
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <div class="card-group">
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e53537dd39923575a522de0_peep-24.svg" class="card-img-top" alt="">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535dbe67293a2e465f4f21_peep-104.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e53513d5197058658a1dc94_peep-9.svg" class="card-img-top" alt="...">
+                </div>   
+            </div>
+            <div class="card-group">
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535367f5fa1a2eedf59e1d_peep-23.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e5358fb9b55b0b0f453f5f5_peep-63.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535bb6e35d38cae7684f8c_peep-86.svg" class="card-img-top" alt="...">
+                </div>
+            
+            </div>
+            <div class="card-group">
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535d314600800f758ffa34_peep-99.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e53575a550b769098f5249d_peep-49.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535997e35d380ada67ad80_peep-68.svg" class="card-img-top" alt="...">
+                </div>
+            
+            </div>
+            <div class="card-group">
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e5359d28becbf257453bece_peep-70.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e53534d67293a6fe95a9616_peep-22.svg" class="card-img-top" alt="...">
+                </div>
+                <div class="card single-photo">
+                    <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e5357fcc99250d0c6c8a111_peep-54.svg" class="card-img-top" alt="...">
+                </div>
+            
+            </div>
+        </div>
+
+        <!--reel de fotos-->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-body-header">Titulo para este hipster</h5>
+                    <h5 class="post-date card-body-header">10/08</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e53537dd39923575a522de0_peep-24.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">26985 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-body-header">Un titulo bueno por acá</h5>
+                    <h5 class="post-date card-body-header">11/08</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535dbe67293a2e465f4f21_peep-104.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">560937 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-body-header">Muchas caras en este ig</h5>
+                    <h5 class="post-date card-body-header">24/08</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e53513d5197058658a1dc94_peep-9.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">9873 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-body-header">Este tipo la rompe con bootstrap</h5>
+                    <h5 class="post-date card-body-header">30/02</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535367f5fa1a2eedf59e1d_peep-23.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">783964 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body card-body-header">
+                    <h5 class="card-title card-body-header">No se me ocurren más titulos</h5>
+                    <h5 class="post-date card-body-header">10/12</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e5358fb9b55b0b0f453f5f5_peep-63.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">4589376 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body card-body-header">
+                    <h5 class="card-title card-body-header">Pen ultimo titulo</h5>
+                    <h5 class="post-date card-body-header">34/07</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535bb6e35d38cae7684f8c_peep-86.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">102345 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body card-body-header">
+                    <h5 class="card-title card-body-header">Por fin se acabó</h5>
+                    <h5 class="post-date card-body-header">01/08</h5>
+                </div>
+                <img src="https://assets.website-files.com/5e51c674258ffe10d286d30a/5e535d314600800f758ffa34_peep-99.svg" class="card-img-top photo-reel" alt="...">
+                <div class="card-body">
+                    <p class="card-likes">45 Likes</p>
+                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ratione repellat quo optio perferendis, quibusdam repellendus exercitationem quasi ipsa, mollitia ut corporis reiciendis error at ipsam tempora? Eveniet, officiis blanditiis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
